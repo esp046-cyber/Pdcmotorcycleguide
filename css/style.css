@@ -1,0 +1,108 @@
+/* ==========================================================================
+   PDC Moto 2026 - Design System
+   "Motorsport Safety & Precision": safety amber on asphalt slate.
+   Mobile-first. Tokens -> base -> layout -> components -> views -> print.
+   ========================================================================== */
+
+/* ---------- 1. TOKENS ---------- */
+:root {
+  /* Spacing (4/8px scale) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* Type */
+  --font-ui: system-ui, -apple-system, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --text-xs: 0.8125rem;   /* 13px captions */
+  --text-sm: 0.9375rem;   /* 15px */
+  --text-md: 1rem;        /* 16px body (mobile minimum) */
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.125rem;
+  --leading: 1.5;
+  --tracking-tight: -0.01em;
+  --tracking-wide: 0.06em;
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 150ms;
+  --dur: 200ms;
+  --dur-slow: 250ms;
+
+  /* Layout */
+  --nav-h: 64px;
+  --audio-h: 96px;
+  --sidebar-w: 248px;
+  --content-max: 960px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+
+  /* Target size */
+  --target: 48px;
+}
+
+/* Dark theme (default) */
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1B2028;
+  --bg-elev: #20262F;
+  --surface: #262D38;
+  --surface-2: #2E3744;
+  --border: #3A4351;
+  --border-strong: #4C586A;
+  --text: #F1EEE8;
+  --muted: #B7BFCB;
+  --accent: #FFA62B;
+  --accent-soft: rgba(255, 166, 43, 0.14);
+  --primary: #FFA62B;
+  --primary-hover: #FFB84D;
+  --on-primary: #1B1100;
+  --pass: #3DDC97;
+  --pass-soft: rgba(61, 220, 151, 0.14);
+  --caution: #FFC857;
+  --caution-soft: rgba(255, 200, 87, 0.14);
+  --danger: #FF7A85;
+  --danger-soft: rgba(255, 122, 133, 0.14);
+  --focus: #FFFFFF;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-2: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-3: 0 12px 32px rgba(0, 0, 0, 0.5);
+  --scrim: rgba(8, 10, 14, 0.66);
+  --asphalt: #2A313C;
+  --lane: #F5C542;
+}
+
+/* Light theme */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #F4F1EC;
+  --bg-elev: #EFEBE4;
+  --surface: #FBF9F5;
+  --surface-2: #EDE8DF;
+  --border: #D6D1C7;
+  --border-strong: #AFA898;
+  --text: #1B2028;
+  --muted: #4A5463;
+  --accent: #A85200;
+  --accent-soft: rgba(168, 82, 0, 0.1);
+  --primary: #F29200;
+  --primary-hover: #FFA21F;
