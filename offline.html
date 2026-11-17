@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1B2028">
+  <title>Offline | PDC Moto 2026</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <style>
+    :root {
+      --bg: #1B2028; --surface: #262D38; --text: #F1EEE8; --muted: #B7BFCB;
+      --amber: #FFA62B; --amber-ink: #1B1100; --emerald: #3DDC97; --crimson: #FF7A85;
+      --border: #3A4351;
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg: #F4F1EC; --surface: #FFFFFF; --text: #1B2028; --muted: #4A5463; --amber: #B85C00; --amber-ink: #FFFFFF; --emerald: #0B7A4B; --crimson: #B3202F; --border: #D6D1C7; }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0; min-height: 100vh; background: var(--bg); color: var(--text);
+      font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Inter, Roboto, sans-serif;
+      padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+    }
+    main { max-width: 720px; margin: 0 auto; }
+    .hero { text-align: center; padding: 24px 0 8px; }
+    .hero svg { width: 72px; height: 72px; }
+    h1 { font-size: 1.6rem; line-height: 1.25; margin: 16px 0 8px; }
+    h2 { font-size: 1.15rem; margin: 0 0 12px; }
+    p { margin: 0 0 12px; color: var(--muted); }
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--crimson); color: var(--crimson); font-weight: 600; font-size: .875rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 48px; min-width: 48px;
+      padding: 0 24px; border: 0; border-radius: 12px; background: var(--amber); color: var(--amber-ink);
+      font: inherit; font-weight: 700; cursor: pointer; margin-top: 8px;
+    }
+    .btn:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
+    .btn:active { transform: scale(.98); }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 16px; margin-top: 16px; }
+    ul { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    li strong { color: var(--text); }
+    .grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+    @media (min-width: 768px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .ok { color: var(--emerald); font-weight: 700; }
+    .warn { color: var(--crimson); font-weight: 700; }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+    @media print { body { background: #fff; color: #000; } .btn { display: none; } .card { border-color: #999; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="hero">
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <path fill="none" stroke="#FFA62B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M8 38a24 24 0 0 1 48 0v8a4 4 0 0 1-4 4H34V36h22M8 38h26v12H12a4 4 0 0 1-4-4v-8Z"/>
+      </svg>
+      <p><span class="badge" role="status">&#9888; You are offline</span></p>
+      <h1>No signal, no problem.</h1>
+      <p>This page isn&rsquo;t saved yet, but these PDC essentials are always available. Reconnect to open the full guide.</p>
+      <button class="btn" type="button" id="retry">Retry connection</button>
+    </div>
+
+    <section class="card" aria-labelledby="h-quick">
+      <h2 id="h-quick">Quick reference: 8-hour PDC (DL Code A &amp; A1)</h2>
+      <ul>
+        <li><strong>Always do the pre-ride check first.</strong> Skipping it earns a demerit.</li>
+        <li><strong>Braking:</strong> about 70% front, 30% rear. Squeeze progressively, never grab. Use engine braking and brake earlier on wet roads.</li>
+        <li><strong>Eyes up:</strong> look where you want to go, not at the plank, cone or ground.</li>
+        <li><strong>Clutch:</strong> find the friction zone, then feather the clutch and drag the rear brake for slow-speed balance.</li>
+      </ul>
+    </section>
+
+    <div class="grid">
+      <section class="card" aria-labelledby="h-checks">
+        <h2 id="h-checks">T-CLOCS pre-ride check</h2>
+        <ul>
+          <li><strong>T</strong> &ndash; Tires &amp; wheels</li>
+          <li><strong>C</strong> &ndash; Controls (levers, throttle, cables)</li>
+          <li><strong>L</strong> &ndash; Lights &amp; electrics</li>
+          <li><strong>O</strong> &ndash; Oil &amp; fluids</li>
+          <li><strong>C</strong> &ndash; Chassis &amp; chain</li>
+          <li><strong>S</strong> &ndash; Stands</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="h-track">
+        <h2 id="h-track">Test track obstacles</h2>
+        <ul>
+          <li><strong>Narrow plank:</strong> steady throttle, feather clutch, head and eyes up.</li>
+          <li><strong>Slalom:</strong> lean the bike, keep your body upright, hold steady throttle.</li>
+          <li><strong>Figure-8:</strong> turn your head early, no foot down.</li>
+          <li><strong>Emergency stop:</strong> stop cleanly inside the lines without skidding.</li>
+          <li><strong>Hill start:</strong> hold the rear brake, release smoothly while adding throttle.</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="card" aria-labelledby="h-law">
+      <h2 id="h-law">Key rules at a glance</h2>
+      <ul>
+        <li><strong>Helmet:</strong> a PS/ICC-marked helmet is required (RA 10054).</li>
+        <li><strong>Passengers:</strong> one passenger only. Children are covered by RA 10666 (Children&rsquo;s Safety on Motorcycles Act).</li>
+        <li><strong>Top box:</strong> stay within LTO limits, and the load must not block lights or plates.</li>
+        <li><strong>Saddlebags:</strong> no higher than the seat and no wider than 14 inches from the side.</li>
+        <li><strong>Demerits:</strong> stalling, foot down on the plank or Figure-8, hitting cones, skipping the pre-check.</li>
+      </ul>
+      <p style="margin-top:12px"><span class="warn">Always verify</span> current requirements with your LTO-accredited driving school or the LTO.</p>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('retry').addEventListener('click', function () {
+      if (navigator.onLine) { location.href = './'; } else { location.reload(); }
+    });
+    window.addEventListener('online', function () { location.href = './'; });
+  </script>
+</body>
+</html>

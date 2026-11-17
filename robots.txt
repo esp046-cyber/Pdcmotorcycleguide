@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /Pdcmotorcycleguide/
+Disallow: /Pdcmotorcycleguide/.well-known/
+
+# Canonical site
+Host: https://esp046-cyber.github.io/Pdcmotorcycleguide/
+Sitemap: https://esp046-cyber.github.io/Pdcmotorcycleguide/sitemap.xml
